@@ -1,7 +1,10 @@
 # Data
 
-data/CORD-19/*
-*.csv
+data/CORD-19
+data/*.csv
+
+# Tools
+
 
 # Notebooks
 *.ipynb_checkpoints/
