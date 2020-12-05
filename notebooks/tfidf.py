@@ -44,11 +44,11 @@ def get_ranked_lists(query, qid, run_name, corpus_df, X_tfidf, tfidf_vectorizer,
     similar_docs = calculate_similarity(X_tfidf, tfidf_vectorizer, query, top_k)
     return [template.format(qid, corpus_df.iloc[idx]['cord_uid'], rank+1, score, run_name) for rank, (idx, score) in enumerate(similar_docs)]
 
-def write_results(out_fpath, corpus_df, query_df, X_tfidf, tfidf_vectorizer, run_name, top_k=1000):
+def write_results(out_fpath, corpus_df, query_df, query_id_col, query_txt_col, X_tfidf, tfidf_vectorizer, run_name, top_k=1000):
     with open(out_fpath, 'w', encoding='utf-8') as writer:
-        for row in query_df.itertuples():
-            qid = row._1
-            query = row.query
+        for idx, topic in query_df.iterrows():
+            qid = topic[query_id_col]
+            query = topic[query_txt_col]
             ranked_lists = get_ranked_lists(query, qid, run_name, corpus_df, X_tfidf, tfidf_vectorizer, top_k=top_k)
             writer.writelines(ranked_lists)
     print(f"Wrote file @ {out_fpath}\n")
