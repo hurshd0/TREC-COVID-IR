@@ -53,6 +53,7 @@ class Tokenizer:
         self.remove_nums = False
         self.porter_stemmer = False
         self.five_stemmer = False
+        self.wordnet_lemmatizer = False
         for config in self.configs_list:
             config = config.lower().strip()
             if config == 'u':
