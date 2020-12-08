@@ -1,14 +1,12 @@
 # Secrets
-
 notebooks/elastic.json
 
 # Data
-
 data/CORD-19
 data/input/*.csv
 
-# Tools
-
+# Models
+data/embeddings/scibert.pkl
 
 # Notebooks
 *.ipynb_checkpoints/
