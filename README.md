@@ -1,7 +1,7 @@
 # TREC-COVID 2020 Task - Building simple yet effective pandemic retrieval engine
 ---
 
-TREC-COVID Challenge is an Information Retrieval (IR) challenge sponsored by NIST in colaboration with Allen Institute for AI and other industry leading research groups. I used Round 3 dataset which contains 40 topics, where each topic represent user's infomation need. The goal of challenge is to retrieve relevant documents for each topic, and evalute to against human judgements. 
+TREC-COVID Challenge is an Information Retrieval (IR) challenge sponsored by NIST in colaboration with Allen Institute for AI and other industry leading research groups. I used Round 3 dataset which contains 40 topics, where each topic represent user's infomation need. The goal of challenge is to retrieve relevant documents for each topic, and evalute them against human judgements. 
 
 ## Method
 
